@@ -51,5 +51,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. MUI + MUI Icons     (styling)
 2. Redux Toolkit     (State Managmenet)
 3. Faker.js     (Dummy Data)
-
+4. color palatte  (https://colorhunt.co/palette/fffbf5f7efe5c3acd07743db)
 
