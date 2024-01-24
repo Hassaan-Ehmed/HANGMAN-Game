@@ -6,6 +6,8 @@ import img3 from "../images/3.png";
 import img4 from "../images/4.png";
 import img5 from "../images/5.png";
 import img6 from "../images/6.png";
+import happy from "../images/happpy2.gif";
+import sad from "../images/sad.gif";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
 import { _setImage } from "../redux/slices/guessword";
@@ -14,15 +16,18 @@ export default function StickmanArea() {
   const count: any = useAppSelector((state: RootState) => state.guessword);
 
   const dispatch = useAppDispatch() 
-  const images = [img0, img1, img2, img3, img4, img5, img6];
+  const images = [img0, img1, img2, img3, img4, img5, img6,happy,sad];
   console.log(count?.imgCount, count);
 
 
-  if(count?.imgCount  > 6 ){
+    // if(count?.imgCount  >= 0  && count?.imageCount === 6){
 
-    dispatch(_setImage("reset" as any));
-  }
+    //   dispatch(_setImage("reset" as any));
+    // }
 
+
+  
+    
   return (
     <div
       style={{

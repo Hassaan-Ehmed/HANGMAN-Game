@@ -6,7 +6,8 @@ export default function Placeholder() {
 
   const storeState: any = useAppSelector((state) => state.guessword);
   const randomWord: string = storeState.randomColor;
-  console.log();
+  const isWin = storeState.isWin;
+  console.log(randomWord);
 
   let correctLettersToDisplay = storeState.correctLetters;
 
@@ -35,7 +36,7 @@ export default function Placeholder() {
             backgroundColor: "transparent",
           }}
         >
-          {correctLettersToDisplay.map((userCorrectLetter: string) =>
+          { isWin  ? actualLetter : correctLettersToDisplay.map((userCorrectLetter: string) =>
             userCorrectLetter == actualLetter ? actualLetter : ""
           )}
         </button>

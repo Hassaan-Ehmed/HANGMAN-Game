@@ -1,12 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import KeyPad from "./components/Keypad";
 import { faker } from "@faker-js/faker";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { _setRandomColor } from "./redux/slices/guessword";
 import StickmanArea from "./components/StickmanArea";
-import GameOver from "./components/GameOver";
+import PlayArea from "./components/PlayArea";
 
 // const chooseRandomNum = (arr)=>{
 
@@ -21,9 +20,11 @@ function App() {
 
   dispatch(_setRandomColor(faker.color.human() as any));
 
+
+
   return (
     <>
-      {/* <div
+      <div
         style={{
           height: "100vh",
           width: "100%",
@@ -32,11 +33,11 @@ function App() {
           alignItems: "center",
         }}
       >
-        <KeyPad />
-        <StickmanArea />
-      </div> */}
 
-      <GameOver/>
+<PlayArea/>       
+        <StickmanArea />
+      </div>
+
     </>
   );
 }
