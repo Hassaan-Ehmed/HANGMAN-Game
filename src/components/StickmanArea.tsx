@@ -17,7 +17,7 @@ export default function StickmanArea() {
 
   const dispatch = useAppDispatch() 
   const images = [img0, img1, img2, img3, img4, img5, img6,happy,sad];
-  console.log(count?.imgCount, count);
+  console.log(count?.imgCount);
 
 
     // if(count?.imgCount  >= 0  && count?.imageCount === 6){

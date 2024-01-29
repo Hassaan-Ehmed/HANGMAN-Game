@@ -6,7 +6,7 @@ import  {
   _setImage,
 } from "../redux/slices/guessword";
 import GameFinish  from "./GameFinish";
-import KeyPad from "./KeyPad";
+import KeyPad from "./Keypad";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import image_wrong from "../images/wrong.png";
 import image_correct from "../images/correct.png";

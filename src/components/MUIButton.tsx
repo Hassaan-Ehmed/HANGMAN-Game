@@ -6,7 +6,7 @@ import {
   _getCorrectLetters,
 _setImage,
 _setOver,
-_setRandomColor,
+_setRandomWord,
 _setWin
 
 } from '../redux/slices/guessword'
@@ -25,7 +25,7 @@ dispatch(_getCorrectLetters([]));
 
 
 
-dispatch(_setRandomColor(faker.color.human())); 
+dispatch(_setRandomWord()); 
 
 }
 

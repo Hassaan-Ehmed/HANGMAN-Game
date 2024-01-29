@@ -5,12 +5,13 @@ export default function Placeholder() {
   const dispatch = useAppDispatch();
 
   const storeState: any = useAppSelector((state) => state.guessword);
-  const randomWord: string = storeState.randomColor;
+  const randomWord: string = storeState.randomWord;
   const isWin = storeState.isWin;
   console.log(randomWord);
-
+  
   let correctLettersToDisplay = storeState.correctLetters;
-
+  
+  console.log(correctLettersToDisplay)
   return (
     <div
       style={{
@@ -37,7 +38,7 @@ export default function Placeholder() {
           }}
         >
           { isWin  ? actualLetter : correctLettersToDisplay.map((userCorrectLetter: string) =>
-            userCorrectLetter == actualLetter ? actualLetter : ""
+            userCorrectLetter == actualLetter.toLowerCase() ? actualLetter : ""
           )}
         </button>
       ))}
