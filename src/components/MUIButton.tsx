@@ -5,6 +5,7 @@ import { useAppDispatch } from '../redux/hooks';
 import { 
   _getCorrectLetters,
 _setImage,
+_setKeys,
 _setOver,
 _setRandomWord,
 _setWin
@@ -23,9 +24,8 @@ dispatch(_setWin(false));
 dispatch(_setOver(false));
 dispatch(_getCorrectLetters([]));
 
-
-
 dispatch(_setRandomWord()); 
+dispatch(_setKeys());
 
 }
 

@@ -11,7 +11,11 @@ export default function Placeholder() {
   
   let correctLettersToDisplay = storeState.correctLetters;
   
-  console.log(correctLettersToDisplay)
+
+  if(randomWord.length === correctLettersToDisplay.length){
+
+    console.log(correctLettersToDisplay)
+  }
   return (
     <div
       style={{
@@ -38,7 +42,7 @@ export default function Placeholder() {
           }}
         >
           { isWin  ? actualLetter : correctLettersToDisplay.map((userCorrectLetter: string) =>
-            userCorrectLetter == actualLetter.toLowerCase() ? actualLetter : ""
+            userCorrectLetter === actualLetter.toLowerCase() ? actualLetter : ""
           )}
         </button>
       ))}
