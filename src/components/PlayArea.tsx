@@ -30,7 +30,6 @@ return (
       style={{
         width: "55%",
         height: "100vh",
-        backgroundColor: "#F7EFE5",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

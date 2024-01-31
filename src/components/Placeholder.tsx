@@ -11,11 +11,7 @@ export default function Placeholder() {
   
   let correctLettersToDisplay = storeState.correctLetters;
   
-
-  if(randomWord.length === correctLettersToDisplay.length){
-
-    console.log(correctLettersToDisplay)
-  }
+  console.log(correctLettersToDisplay)
   return (
     <div
       style={{
@@ -29,22 +25,23 @@ export default function Placeholder() {
       }}
     >
       {randomWord?.split("")?.map((actualLetter: string, index: number) => (
-        <button
+        <div
           key={index}
           style={{
             padding: "20px",
-            fontSize: "30px",
-            border: "3px solid black",
-            borderTop: "none",
-            borderRight: "none",
-            borderLeft: "none",
+            fontSize: "35px",
+            borderBottom: "4px solid white",
             backgroundColor: "transparent",
+            color:"white",
+            height:"20px",
+            width:"20px",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
           }}
         >
-          { isWin  ? actualLetter : correctLettersToDisplay.map((userCorrectLetter: string) =>
-            userCorrectLetter === actualLetter.toLowerCase() ? actualLetter : ""
-          )}
-        </button>
+          { isWin  ? actualLetter : correctLettersToDisplay.includes(actualLetter.toLowerCase())  ?  actualLetter : "" }
+        </div>
       ))}
     </div>
   );

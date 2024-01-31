@@ -22,7 +22,7 @@ export default function CategoryHeading() {
       noValidate
       autoComplete="off"
     >
-      <Typography   sx={{color:"black",fontWeight:"bold",fontSize:"30px",borderRadius:"10px",textAlign:"center",border:"3px inset #7743db"}}>
+      <Typography   sx={{color:"white",fontWeight:"bold",fontSize:"30px",borderRadius:"10px",textAlign:"center",border:"3px inset #7743db"}}>
 
 {random_category}
 

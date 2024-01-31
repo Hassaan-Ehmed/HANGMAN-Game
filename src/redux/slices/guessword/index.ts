@@ -5,8 +5,8 @@ let initialStates = {
   correctLetters: [],
   keyMapping: convertedKeyMapping,
   imgCount: 0,
-  randomWord: "",
-  randomCategory: "",
+  randomWord:"rose",
+  randomCategory: "Flower",
   isWin: false,
   isOver: false,
 };
@@ -20,7 +20,7 @@ export const guessWordSlice: any = createSlice({
     },
     _getCorrectLetters: (state: any, action: any) => {
       if (action.payload === "remove") {
-        state.correctLetters = [];
+         state.correctLetters = [];
       }else{
 
         state.correctLetters = [...state.correctLetters, action.payload];
@@ -30,6 +30,7 @@ export const guessWordSlice: any = createSlice({
     },
 
     _setRandomWord: (state: any) => {
+      
       const randomCategories = [
         "Animal",
         "Color",
@@ -38,8 +39,7 @@ export const guessWordSlice: any = createSlice({
         "Person's Name",
       ];
 
-      const grabRandomCategory =
-        randomCategories[Math.floor(Math.random() * randomCategories.length)];
+      const grabRandomCategory = randomCategories[Math.floor(Math.random() * randomCategories.length)];
 
       switch (grabRandomCategory) {
         case "Animal":
@@ -102,6 +102,7 @@ export const guessWordSlice: any = createSlice({
 
         default:
          _setRandomWord()
+         state.randomCategory = grabRandomCategory;
           break;
       }
     },
@@ -113,11 +114,11 @@ export const guessWordSlice: any = createSlice({
           break;
 
         case "happy":
-          state.imgCount =  7;
+          state.imgCount =  8;
           break;
 
         case "sad":
-          state.imgCount =  6 ;
+          state.imgCount =  7 ;
           break;
 
         default:

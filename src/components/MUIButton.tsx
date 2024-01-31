@@ -14,17 +14,19 @@ _setWin
 import { faker } from '@faker-js/faker';
 
 export default function MUIButton() {
+
+
 const dispatch = useAppDispatch();
 
 
 const _handleRestart=()=>{
 
-dispatch(_setImage("reset"));
-dispatch(_setWin(false));
-dispatch(_setOver(false));
-dispatch(_getCorrectLetters([]));
-
-dispatch(_setRandomWord()); 
+  
+  dispatch(_setImage("reset"));
+  dispatch(_setWin(false));
+  dispatch(_setOver(false));
+dispatch(_getCorrectLetters("remove" as any ));
+dispatch(_setRandomWord())
 dispatch(_setKeys());
 
 }

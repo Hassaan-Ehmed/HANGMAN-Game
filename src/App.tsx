@@ -6,13 +6,17 @@ import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { _setRandomWord } from "./redux/slices/guessword";
 import StickmanArea from "./components/StickmanArea";
 import PlayArea from "./components/PlayArea";
+import wall from './images/wall4.png'
 
 
 
 function App() {
   const dispatch = useAppDispatch();
 
-  dispatch(_setRandomWord());
+
+
+    dispatch(_setRandomWord());
+
 
 
   return (
@@ -26,9 +30,19 @@ function App() {
           alignItems: "center",
         }}
       >
+        <img src={wall} alt=""  style={{
+          height:"100vh",
+          width:"100%",
+          position:"absolute",
+          zIndex:-1,
+          objectFit:"cover"
+        }}/>
+
 
 <PlayArea/>       
-        <StickmanArea />
+ <StickmanArea />
+
+
       </div>
 
     </>
